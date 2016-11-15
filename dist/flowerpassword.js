@@ -1,12 +1,17 @@
 'use strict';
 
-const MD5 = require('blueimp-md5');
+var MD5 = require('blueimp-md5');
 
 function fpCode(password, key, length) {
-    var hmd5, rule, source, str, code32, code01;
+    var hmd5 = void 0,
+        rule = void 0,
+        source = void 0,
+        str = void 0,
+        code32 = void 0,
+        code01 = void 0;
     length = length || 16;
 
-    if (!password || !key || (length < 2) || (length > 32)) {
+    if (!password || !key || length < 2 || length > 32) {
         return null;
     }
 

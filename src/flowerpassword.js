@@ -3,7 +3,7 @@
 const MD5 = require('blueimp-md5');
 
 function fpCode(password, key, length) {
-    var hmd5, rule, source, str, code32, code01;
+    let hmd5, rule, source, str, code32, code01;
     length = length || 16;
 
     if (!password || !key || (length < 2) || (length > 32)) {
@@ -15,7 +15,7 @@ function fpCode(password, key, length) {
     source = MD5(hmd5, 'snow').split('');
     str = 'sunlovesnow1990090127xykab';
 
-    for (var i = 0; i < 32; i++) {
+    for (let i = 0; i < 32; i++) {
         if (isNaN(source[i])) {
             if (str.search(rule[i]) > -1) {
                 source[i] = source[i].toUpperCase();

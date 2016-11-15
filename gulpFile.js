@@ -10,6 +10,7 @@ const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const babel = require('gulp-babel');
 
 
 gulp.task('clean-all', function() {
@@ -19,6 +20,9 @@ gulp.task('clean-all', function() {
 gulp.task('default', ['clean-all'], function() {
     return gulp.src([srcPath + '/*.js'])
         .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(gulp.dest(dstPath + '/'))
         .pipe(uglify())
         .pipe(rename({
