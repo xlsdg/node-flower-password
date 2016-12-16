@@ -28,4 +28,4 @@ function fpCode(password, key, length) {
     return (isNaN(code01) ? code01 : 'K') + code32.slice(1, length);
 }
 
-module.exports = fpCode;
+exports = module.exports = fpCode;
