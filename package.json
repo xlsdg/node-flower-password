@@ -2,7 +2,7 @@
   "name": "node-flower-password",
   "title": "node-flower-password",
   "description": "Flower Password implementation for Node.js",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "main": "dist/flowerpassword.js",
   "umd:main": "dist/flowerpassword.umd.js",
   "module": "dist/flowerpassword.m.js",
